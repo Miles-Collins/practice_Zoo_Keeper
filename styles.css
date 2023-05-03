@@ -1,0 +1,24 @@
+.zooPin {
+  height: 25dvh;
+  width: 25dvw;
+  background-image: url('https://thumbs.dreamstime.com/b/cute-green-meadow-grass-seamless-pattern-green-herbal-bushes-texture-moss-textile-backgrounds-wallpaper-covers-surface-96829036.jpg');
+  background-size: contain;
+  border: 10px double black;
+}
+
+marquee{
+  background-size: cover;
+}
+
+.biz {
+  height: 25dvh;
+}
+
+.animal {
+  cursor: pointer;
+}
+
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/000/368/260/original/a-nature-zoo-template-vector.jpg');
+  
+}

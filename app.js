@@ -37,15 +37,16 @@ const animals = [
   }
 ]
 
+let money = 0
+
 function feedAnimal(animalName) {
   let foundAnimal = animals.find(animal => animal.name == animalName)
   console.log(foundAnimal)
-    foundAnimal.hunger += 2
-    if (foundAnimal.hunger >= 100) {
-      foundAnimal.hunger = 100
-      console.log(`${foundAnimal.name} is full.`);
+    
+    if (foundAnimal.hunger < 100 && foundAnimal.hunger > 0) {
+      foundAnimal.hunger += 10
+      updateAnimal(foundAnimal)
     } 
-    updateAnimal(foundAnimal)
   }
 
   function updateAnimal(foundAnimal) {
@@ -59,11 +60,8 @@ function feedAnimal(animalName) {
     if(foundAnimal.hunger == 0) {
       foundAnimal.mood = '💀'
       foundAnimal.emoji = "🪦"
-      if(marquee1 && marquee2) {
       marquee1.stop()
       marquee2.stop()
-      
-      }
     } else if(foundAnimal.hunger <= 20) {
       foundAnimal.mood = "😭"
     } else if(foundAnimal.hunger <= 40) {
@@ -78,8 +76,6 @@ function feedAnimal(animalName) {
     animalH3.innerText = `${foundAnimal.name} | ${foundAnimal.mood} | ${foundAnimal.hunger}%`
   }
 
-
-
 function hungerLevels() {
   animals.forEach(a => {
     if(a.hunger <= 0) {
@@ -91,5 +87,41 @@ function hungerLevels() {
   })
 }
 
-setInterval(hungerLevels, 500)
+function getMoney() {
+  let paycheck = 0
+  for(let i = 0; i < animals.length; i++) {
+    let animal = animals[i]
+
+    switch(animal.mood) {
+      case "🥰":
+        paycheck += 20
+        break;
+      case "🤗":
+        paycheck += 15
+        break;
+      case "😅":
+        paycheck += 5
+        break;
+      case "😨":
+        paycheck += 1
+        break;
+      case "😭":
+        paycheck -= 5
+        break;
+      default:
+        paycheck -= 25 
+        break; 
+    }
+    money += paycheck
+    if(paycheck >= 0) {
+      document.getElementById('paycheck').innerText = `$${paycheck}`
+    } else {
+      document.getElementById('paycheck').innerHTML = `<span class="text-danger">$${paycheck}</span>`
+    }
+    document.getElementById('money').innerText = money
+  }
+}
+
+setInterval(hungerLevels, 100)
+setInterval(getMoney, 5000)
 
