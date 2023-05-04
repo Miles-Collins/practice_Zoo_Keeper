@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link rel="stylesheet" href="zooKeeper2.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <header class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-6">
+      <h1>Zoo Keeper...</h1>
+    </div>
+    <div class="col-4 offset-1">
+      <h5>Money: <span id="money">$0</span></h5>
+      <h5>Income: <span id="income">$0</span></h5>
+    </div>
+  </div>
+  </header>
+
+  <main class="container-fluid">
+    <div class="row justify-content-center mt-3">
+
+      <div id="Debra" class="col-10 col-md-4 text-center">
+        <marquee behavior="alternate" direction="up" scrollamount="3" class="zooPin">
+          <marquee behavior="alternate" direction="right">
+          <h1 class="animal" onclick="feedAnimal('Debra')">🦓</h1>
+          </marquee>
+        </marquee>
+        <h6 class="mt-2">Debra | 🥰 | Hunger: 100%</h6>
+      </div>
+
+      <div id="Jake" class="col-10 col-md-4 text-center">
+        <marquee behavior="alternate" direction="up" scrollamount="3" class="zooPin">
+          <marquee behavior="alternate" direction="left">
+          <h1 class="animal" onclick="feedAnimal('Jake')">🐍</h1>
+          </marquee>
+        </marquee>
+        <h6 class="mt-2">Jake | 🥰 | Hunger: 100%</h6>
+      </div>
+
+      <div id="Mark" class="col-10 col-md-4 text-center">
+        <marquee behavior="alternate" direction="up" scrollamount="3" class="zooPin">
+          <marquee behavior="alternate" direction="right">
+          <h1 class="animal" onclick="feedAnimal('Mark')">🦈</h1>
+          </marquee>
+        </marquee>
+        <h6 class="mt-2">Mark | 🥰 | Hunger: 100%</h6>
+      </div>
+
+      <div id="Dyson" class="col-10 col-md-4 text-center">
+        <marquee behavior="alternate" direction="up" scrollamount="3" class="zooPin">
+          <marquee behavior="alternate" direction="left">
+          <h1 class="animal" onclick="feedAnimal('Dyson')">🦬</h1>
+          </marquee>
+        </marquee>
+        <h6 class="mt-2">Dyson | 🥰 | Hunger: 100%</h6>
+      </div>
+
+      <div id="Carter" class="col-10 col-md-4 text-center">
+        <marquee behavior="alternate" direction="up" scrollamount="3" class="zooPin">
+          <marquee behavior="alternate" direction="right">
+          <h1 class="animal" onclick="feedAnimal('Carter')">🦦</h1>
+          </marquee>
+        </marquee>
+        <h6 class="mt-2">Carter | 🥰 | Hunger: 100%</h6>
+      </div>
+
+      <div id="Dawn" class="col-10 col-md-4 text-center">
+        <marquee behavior="alternate" direction="up" scrollamount="3" class="zooPin">
+          <marquee behavior="alternate" direction="left">
+          <h1 class="animal" onclick="feedAnimal('Dawn')">🦢</h1>
+          </marquee>
+        </marquee>
+        <h6 class="mt-2">Dawn | 🥰 | Hunger: 100%</h6>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+<script src="zooKeeper2.js"></script>
+</html>

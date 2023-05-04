@@ -1,0 +1,21 @@
+header {
+  background-color: antiquewhite;
+  color: black;
+}
+
+.zooPin {
+  height: 30dvh;
+  width: 100%;
+  background-image: url('https://thumbs.dreamstime.com/b/cute-green-meadow-grass-seamless-pattern-green-herbal-bushes-texture-moss-textile-backgrounds-wallpaper-covers-surface-96829036.jpg');
+  background-size: contain;
+  border: double black 10px;
+}
+
+.animal {
+  cursor: pointer;
+  user-select: none;
+}
+
+body {
+  background-color: skyblue;
+}
